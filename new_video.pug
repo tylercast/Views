@@ -1,0 +1,18 @@
+doctype html
+html
+  head
+    title Add New Video
+  body
+    h1 Share a New Video
+    if error
+      p(style="color:green") #{error}
+    form(action="/video/new" method="POST")
+      label(for="title") Title:
+      input(type="text" name="title" required)
+      br
+      label(for="url") YouTube URL:
+      input(type="url" name="url" required)
+      br
+      button(type="submit") Add Video
+    br
+    a(href="/video/dashboard/all") Go to Dashboard

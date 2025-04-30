@@ -1,0 +1,11 @@
+doctype html
+html
+  head
+    title Video Dashboard
+  body
+    h1 Welcome #{name}!
+    h2 Your Video Dashboard
+    each video in videos
+  div
+    h3 #{video.title}
+    iframe(width="320" height="240" src=video.url frameborder="0" allowfullscreen)
